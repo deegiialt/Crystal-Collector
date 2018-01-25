@@ -39,7 +39,7 @@
 	function reset () {
 		//computer picks randome number b/w 19-120
 		computerRandomNumber = Math.floor(Math.random() * 120) + 19;
-		//random value for crystals
+		//random value for crystals b/w 1-12
 		crystalOneValue = Math.floor(Math.random() * 12) + 1;
 		crystalTwoValue = Math.floor(Math.random() * 12) + 1;
 		crystalThreeValue = Math.floor(Math.random() * 12) + 1;
@@ -51,19 +51,12 @@
     $(".crystal").on("click", function() {
         // Figure out what crystal they clicked and store in a variable
         var crystalPressed = $(this).attr("value");
-        // Store crystal value in variable (crystalClickedValue)
-        // var crystalOneClickedValue = crystalOneValue
-        // var crystalTwoClickedValue = crystalTwoValue
-        // var crystalThreeClickedValue = crystalThreeValue
-        // var crystalFourClickedValue = crystalFourValue
 
         // Add crystalClickedValue to userTotalScore
         if (crystalPressed == "crystal1") {
         	userTotalScore += crystalOneValue;
-        	console.log("crystal 1 pressed")
         } else if (crystalPressed == "crystal2") {
         	userTotalScore += crystalTwoValue;
-        	console.log("crystal 2 pressed")
         } else if (crystalPressed == "crystal3") {
         	userTotalScore += crystalThreeValue;
         } else if (crystalPressed == "crystal4") {
