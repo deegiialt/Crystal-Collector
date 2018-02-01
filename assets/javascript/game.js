@@ -1,5 +1,5 @@
  // On Page Load:
- $(document).ready(function () {
+ // $(document).ready(function () {
 
         // Create variables (and set them to default values):
         var computerRandomNumber;
@@ -48,7 +48,9 @@
 	};
 
     // On crystal click:
-    $(".crystal").on("click", function() {
+    // $(".crystal").on("click", 
+    	function startGame() {
+    		updateScore();
         // Figure out what crystal they clicked and store in a variable
         var crystalPressed = $(this).attr("value");
 
@@ -84,5 +86,8 @@
 			// Call update items on the page function
 			updateItems();
 		} 
-	});
-});
+	}
+
+	$(document).on("click", ".crystal", startGame);
+	// );
+// });
